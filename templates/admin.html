@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>auto VM admin Panel!</title>
+</head>
+<body>
+Requests
+<ul>
+    {% for request in requests %}
+    <li>
+        {{request}}
+        <a href="/approve?_id={{request['_id']}}">Approve!</a>
+        <br/><br/>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
